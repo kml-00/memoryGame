@@ -16,8 +16,15 @@ function flipCard(event)
 } 
 
 function checkCardsMatch(cards) {
-  let match = cards[0].dataset.card === cards[1].dataset.card;
-  return match;
+    if(cards[0].id !== cards[1].id) {
+        let match = cards[0].dataset.card === cards[1].dataset.card;
+        return match;
+    }
+    else {
+        return false;
+    }
+ 
+  
 }
 
 
