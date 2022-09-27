@@ -12,7 +12,7 @@ function flipCard(event)
         checkCardsMatch(cardFlip)?  setTimeout(deleteCards,1000,cardFlip):setTimeout(unflipCards,1000,cardFlip);
     }
 
-    console.log(cardFlip);
+    
 } 
 
 function checkCardsMatch(cards) {
