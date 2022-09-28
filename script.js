@@ -5,11 +5,11 @@ let cardFlip=[];
 function flipCard(event)
 {
     event.target.parentElement.classList.add("flip");
-    cardFlip.push(event.target.parentElement);
+    cardFlip.length===2?"": cardFlip.push(event.target.parentElement);
     if(cardFlip.length === 2)
     {
        
-        checkCardsMatch(cardFlip)?  setTimeout(deleteCards,1000,cardFlip):setTimeout(unflipCards,1000,cardFlip);
+        checkCardsMatch(cardFlip)?  setTimeout(deleteCards,500,cardFlip):setTimeout(unflipCards,500,cardFlip);
     }
 
     
@@ -40,7 +40,13 @@ function deleteCards(cards) {
         )
         clearShadow(cards);
         resetCardsArr()
+        gameOver()
         
+}
+
+function gameOver() {
+    let tmp =document.querySelectorAll('.game-card img');
+    tmp.length===0?alert("gameOver"):"";
 }
 
 function unflipCards(cards) {
