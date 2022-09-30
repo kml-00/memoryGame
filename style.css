@@ -11,12 +11,14 @@ body {
 }
 
 .memory-game-container {
+   
     width: 640px;
     height: 640px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
+    display: none;
   }
 
 .game-card {
@@ -55,3 +57,28 @@ body {
 .card-front {
     transform: rotateY(180deg);
   }
+
+.player {
+  width: 30rem;
+  margin: auto;
+  padding: 4rem;
+  background-color: aliceblue;
+  border-radius: .5rem;
+}
+
+.player .label {
+width: 100%;
+margin-bottom: 1rem;
+}
+
+.player button {
+  width: 100%;
+  margin-bottom:  1rem;
+  padding: 12px 20px;
+}
+
+.player input[type=text] {
+  width: 100%;
+  margin-bottom:  1rem;
+  padding: 12px 20px;
+}
